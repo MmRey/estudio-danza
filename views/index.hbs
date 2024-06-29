@@ -1,0 +1,193 @@
+ <div class="container-fluid hero-container">
+      <div id="home" class="row align-items-center hero scroll_section">
+        <div class="col-lg-3 offset-lg-2">
+          <h1 id="main"> Be Free Dance Studio: ¡El lugar que te mantiene en movimiento!</h1> 
+      <!--    <p class="hero-text"> ¡Descubre tu ritmo, desata tu pasión en Be Free Studio: ¡El lugar que te mantiene en movimiento!</p> -->
+        </div>
+      </div>
+    </div>
+    <div class="row my-3">
+          <div id="novedades" class="col-md-5 offset-md-2 py-3 scroll_section">
+  <link rel="preconnect" href="https://getbootstrap.com/docs/5.3/components/modal/">
+               <h2>Novedades</h2>
+               <ul class="lista-novedades">
+                {{#each novedades}}
+                    <li>
+                    <a href="javascript:void(0)" data-bs-toggle="modal"
+                    data-bs-target="#Modal{{id}}"><img src="{{imagen}}"> {{Titulo}}</a>
+                    </li>
+              {{/each}}
+ 
+  </ul>
+  </div>
+ <!-- Modal -->
+  {{#each novedades}}
+      <div class="modal fade" id="Modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">{{Titulo}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="{{imagen}}">
+        <h3>{{Subtitulo}}</h3>
+        <p>{{Fecha}}</p>
+      </div>
+       </div>
+      </div>
+      </div>
+   {{/each}}
+
+  
+<!--Cierre Modal-->
+
+
+  <div class="col-md-3 my-3">
+     <div class="rounded py-5 testimonios">
+          <h2 class="text-center">Testimonios</h2>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true">  
+        <div class="carousel-indicators">
+   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  
+<div class="carousel-inner">
+   <div class="carousel-item active">
+     <div class="testimonio">
+     <h5>"El mejor estudio del mundo"</h5>
+      <p>Lucas, de Banfield. 20/4/2022</p>
+      </div>
+   </div>
+<div class="carousel-item">
+     <div class="testimonio">
+     <h5>"La profe es la mejor, aprendo mucho!"</h5>
+     <p>Lucia, Caba. 25/5/2024</p>
+   </div>
+</div>
+ <div class="carousel-item">
+     <div class="testimonio">
+     <h5>"Me encanta bailar, el mejor estudio de Avellaneda"</h5>
+      <p> Mara, de Avellaneda. 12/07/2023 </p>
+     </div>
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+  
+   </div>
+   </div>
+</div>
+
+ 
+
+<div id="historia" class="row align-items-center py-4 row py-4 scroll_section">
+  <div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
+    <img src="/images/heels.jpg" alt="historia 1" class="img-fluid">
+  </div>
+  <div class="col-lg-2 col-md-3 d-none d-sm-block">
+    <img src="/images/reggeaton.jpg" alt="historia 2" class="img-fluid">
+  </div>
+  <div class="col-12 d-sm-none">
+    <img src="/images/hiphop.jpg" alt="historia 3" class="img-fluid">
+  </div>
+  <div class="col-lg-4 col-md-6 mt-4 mt-sm-0">
+    <h2 id="titulo-historia">Historia</h2>
+    <p>En “Be Free Studio”, nos enorgullece ser mucho más que un estudio de danza; somos una comunidad dinámica dedicada a inspirar y a través del arte del movimiento. Aquí, la diversión y la alegría se entrelazan con el aprendizaje y la excelencia, creando un ambiente donde cada persona puede crecer, compartir buenas experiencias y desarrollarse como bailarín. Valoramos la inclusión y creemos firmemente que no es necesario tener experiencia previa para ser parte de nuestro estudio. Nuestro compromiso con la calidad y la profesionalidad se refleja en nuestro equipo altamente calificado, que ofrece un acompañamiento formativo personalizado para cada estudiante, brindando herramientas para cada etapa formativa. Impulsados por una profunda pasión por la danza y una dedicación a la excelencia, nos esforzamos por crear un ambiente acogedor y estimulante donde cada individuo pueda descubrir su propio ritmo y potencial. En “Be Free Studio”, creemos en el poder transformador del baile para enriquecer nuestras vidas. 
+            Únete a nosotros y descubre el placer de bailar libremente. ¡Sé parte de nuestra familia de bailarines!
+</p>
+  </div>
+</div>
+<div id="nosotros" class="row align-items-stretch my-3 staff py-4 scroll_section">
+  <div class="col-lg-8 offset-lg-2">
+    <h2>Nosotros</h2>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="/images/sofia.jpeg" class="card-img-top" alt="Sofia">
+          <div class="card-body">
+            <h5 class="card-title">Sofia</h5>
+            <p class="card-text">Sofía es una apasionada profesora de reggaeton que ha dedicado su vida a compartir su amor por este ritmo contagioso y enérgico. Con una trayectoria impresionante en la escena musical, Sofía aporta su talento y experiencia a cada una de sus clases, inspirando a sus estudiantes a explorar los orígenes y la evolución del reggaeton.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="/images/diego.jpeg" class="card-img-top" alt="Diego">
+          <div class="card-body">
+            <h5 class="card-title">Diego</h5>
+            <p class="card-text">Diego es un profesor de hip hop con una amplia experiencia en la enseñanza de diferentes estilos de baile urbanos. Con más de 7 años de experiencia, Diego se especializa en hip hop, popping, reggaeton, waacking, vogue y otras danzas urbanas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="/images/javier.jpeg" class="card-img-top" alt="Javier">
+          <div class="card-body">
+            <h5 class="card-title">Javier</h5>
+            <p class="card-text">Javier es un profesor de heels que aporta su talento y dedicación a la creación de nuevas y emocionantes coreografías. Combinando la tradición del baile en tacones con un toque de innovación creativa, Javier logra sorprender constantemente a sus alumnos con rutinas únicas y cautivadoras.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="/images/laura.jpeg" class="card-img-top" alt="Laura">
+          <div class="card-body">
+            <h5 class="card-title">Laura</h5>
+            <p class="card-text">Laura es una profesora de baile clásico con una amplia experiencia en la enseñanza de diferentes estilos de baile clásico, incluyendo ballet, moderno y contemporáneo. Con una trayectoria impresionante en la escena del baile, Laura aporta su talento y dedicación a la creación de nuevas y emocionantes coreografías.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<div id="conocenos" class="row py-4 scroll_section">
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h2>Visitanos</h2>
+        <div class="mapa">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26247.91562409501!2d-58.34396843937108!3d-34.68021565950213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca4731f74cff%3A0xdffdd4bcf49d6a86!2sCin%C3%A9polis%20Avellaneda!5e0!3m2!1ses-419!2sar!4v1717266169328!5m2!1ses-419!2sar"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h2>Contactanos</h2>
+    <form class="row g-3" id="contactform" action="/" method="post">
+      <div class="col-md-6">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre">
+      </div>
+      <div class="col-md-6">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="apellido" name="apellido">
+      </div>
+      <div class="col-12">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="email@email.com" name="email">
+      </div>
+      <div class="col-12">
+        <label for="tel" class="form-label">Tel</label>
+        <input type="text" class="form-control" id="tel" placeholder="..." name="tel">
+      </div>
+      <div class="col-12">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="3" name="mensaje"></textarea>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Enviar</button> 
+      </div> 
+    </form>
+    <p>{{{ message }}}</p>
+</div>
+</div>
